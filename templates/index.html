@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>iced - A cross-platform GUI library for Rust</title>
+
+    <link rel="stylesheet" href="main.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/js/all.min.js"
+        integrity="sha512-YSdqvJoZr83hj76AIVdOcvLWYMWzy6sJyIMic2aQz5kh2bPTd9dzY3NtdeEAzPp/PhgZqr4aJObB3ym/vsItMg=="
+        crossorigin="anonymous"></script>
+</head>
+<body>
+    <section class="has-background-primary">
+        <div class="container">
+
+            <!-- Navigation Bar -->
+            <nav class="navbar is-primary" role="navigation" aria-label="main navigation">
+                <div class="navbar-brand">
+                    <a class="navbar-item" href="/" style="padding: 0 0.5rem;">
+                        <img id="navbar-brand-img" src="logo.text.svg" style="max-height: 75%;">
+                    </a>
+
+                    <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbar">
+                        <span aria-hidden="true"></span>
+                        <span aria-hidden="true"></span>
+                        <span aria-hidden="true"></span>
+                    </a>
+                </div>
+
+                <div id="navbar" class="navbar-menu">
+                    <div class="navbar-end">
+                        <a class="navbar-item" href="/">
+                            <span class="icon">
+                                <i class="fas fa-home"></i>
+                            </span>
+                            <span>Home</span>
+                        </a>
+
+                        <a class="navbar-item" href="/documentation">
+                            <span class="icon">
+                                <i class="fas fa-book"></i>
+                            </span>
+                            <span>Documentation</span>
+                        </a>
+                        <div class="navbar-item">
+                            <div class="buttons">
+                                <a class="button is-light" href="https://github.com/iced-rs/iced">
+                                    <span class="icon">
+                                        <i class="fab fa-github"></i>
+                                    </span>
+                                    <span>GitHub</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </section>
+
+    <!-- Hero -->
+    <section class="hero is-dark is-medium is-bold">
+        <div class="hero-body">
+            <div class="container">
+                <div class="columns">
+                    <div class="column is-one-third px-6">
+                        <figure class="image">
+                            <img src="logo.svg" class="is-square">
+                        </figure>
+                    </div>
+                    <div class="column px-6">
+                        <h1 class="title is-1 pb-6">
+                            iced
+                        </h1>
+                        <p class="subtitle is-3">
+                            A cross-platform GUI library for Rust focused on simplicity and type-safety. Inspired by Elm.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="main.js"></script>
+</body>
+</html>
