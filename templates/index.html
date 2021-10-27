@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -14,14 +13,13 @@
         crossorigin="anonymous"></script>
 </head>
 <body>
-    <section class="has-background-primary">
+    <section>
         <div class="container">
-
             <!-- Navigation Bar -->
-            <nav class="navbar is-primary" role="navigation" aria-label="main navigation">
+            <nav class="navbar" role="navigation" aria-label="main navigation">
                 <div class="navbar-brand">
-                    <a class="navbar-item" href="/" style="padding: 0 0.5rem;">
-                        <img id="navbar-brand-img" src="logo.text.svg" style="max-height: 75%;">
+                    <a class="navbar-item py-0" href="/">
+                        <img src="logo.black.svg" style="max-height: 2.0rem">
                     </a>
 
                     <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbar">
@@ -37,15 +35,23 @@
                             <span class="icon">
                                 <i class="fas fa-home"></i>
                             </span>
-                            <span>Home</span>
+                            <span class="ml-1">Home</span>
                         </a>
 
                         <a class="navbar-item" href="/documentation">
                             <span class="icon">
                                 <i class="fas fa-book"></i>
                             </span>
-                            <span>Documentation</span>
+                            <span class="ml-1">Documentation</span>
                         </a>
+
+                        <a class="navbar-item" href="/community">
+                            <span class="icon">
+                                <i class="fas fa-users"></i>
+                            </span>
+                            <span class="ml-1">Community</span>
+                        </a>
+
                         <div class="navbar-item">
                             <div class="buttons">
                                 <a class="button is-light" href="https://github.com/iced-rs/iced">
@@ -63,26 +69,25 @@
     </section>
 
     <!-- Hero -->
-    <section class="hero is-dark is-medium is-bold">
+    <section class="hero is-primary is-bold">
         <div class="hero-body">
-            <div class="container">
-                <div class="columns">
-                    <div class="column is-one-third px-6">
-                        <figure class="image">
-                            <img src="logo.svg" class="is-square">
-                        </figure>
-                    </div>
-                    <div class="column px-6">
-                        <h1 class="title is-1 pb-6">
-                            iced
-                        </h1>
-                        <p class="subtitle is-3">
-                            A cross-platform GUI library for Rust focused on simplicity and type-safety. Inspired by Elm.
-                        </p>
-                    </div>
-                </div>
+            <div class="container" align="center">
+                <figure class="image">
+                    <img src="logo.white.svg" style="max-width: 35rem">
+                </figure>
+                <p class="subtitle is-3">
+                    A cross-platform GUI library for Rust focused on simplicity and type-safety.
+                </p>
             </div>
         </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <h1 class="title">
+                Showcase
+            </h1>
+        <div>
     </section>
 
     <script src="main.js"></script>
