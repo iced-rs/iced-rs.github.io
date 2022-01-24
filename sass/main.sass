@@ -1,0 +1,24 @@
+@charset "utf-8"
+
+@import "../libraries/bulma/sass/utilities/initial-variables.sass"
+
+$blue: #3645ff
+$primary: $blue
+$background: $white
+$secondary: #45a2f8
+//$scheme-main: $black
+//$scheme-invert: $white
+//$text: $white-ter
+//$text-strong: $white
+//$text-invert: $black
+
+@import "../libraries/bulma/bulma.sass"
+
+
+.hero.is-primary.is-bold
+  $gradient-top-left: darken(saturate(adjust-hue($primary, -10deg), 10%), 10%)
+  $gradient-bottom-right: lighten(saturate(adjust-hue($secondary, 10deg), 5%), 5%)
+  background-image: linear-gradient(141deg, $gradient-top-left 0%, $primary 71%, $gradient-bottom-right 100%)
+  +mobile
+    .navbar-menu
+      background-image: linear-gradient(141deg, $gradient-top-left 0%, $primary 71%, $gradient-bottom-right 100%)
