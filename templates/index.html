@@ -13,80 +13,83 @@
         crossorigin="anonymous"></script>
 </head>
 <body>
-    <section>
+    <!-- Navigation Bar -->
+    <nav class="navbar section" role="navigation" aria-label="main navigation">
         <div class="container">
-            <!-- Navigation Bar -->
-            <nav class="navbar" role="navigation" aria-label="main navigation">
-                <div class="navbar-brand">
-                    <a class="navbar-item py-0" href="/">
-                        <img src="logo.black.svg" style="max-height: 2.0rem">
+            <div class="navbar-brand">
+                <a class="navbar-item py-0" href="/">
+                    <img src="logo.black.svg" style="max-height: 2.0rem">
+                </a>
+
+                <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbar">
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                </a>
+            </div>
+
+            <div id="navbar" class="navbar-menu">
+                <div class="navbar-end">
+                    <a class="navbar-item" href="/">
+                        <span class="icon">
+                            <i class="fas fa-home"></i>
+                        </span>
+                        <span class="ml-1">Home</span>
                     </a>
 
-                    <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbar">
-                        <span aria-hidden="true"></span>
-                        <span aria-hidden="true"></span>
-                        <span aria-hidden="true"></span>
+                    <a class="navbar-item" href="/documentation">
+                        <span class="icon">
+                            <i class="fas fa-book"></i>
+                        </span>
+                        <span class="ml-1">Documentation</span>
                     </a>
-                </div>
 
-                <div id="navbar" class="navbar-menu">
-                    <div class="navbar-end">
-                        <a class="navbar-item" href="/">
-                            <span class="icon">
-                                <i class="fas fa-home"></i>
-                            </span>
-                            <span class="ml-1">Home</span>
-                        </a>
+                    <a class="navbar-item" href="/community">
+                        <span class="icon">
+                            <i class="fas fa-users"></i>
+                        </span>
+                        <span class="ml-1">Community</span>
+                    </a>
 
-                        <a class="navbar-item" href="/documentation">
-                            <span class="icon">
-                                <i class="fas fa-book"></i>
-                            </span>
-                            <span class="ml-1">Documentation</span>
-                        </a>
-
-                        <a class="navbar-item" href="/community">
-                            <span class="icon">
-                                <i class="fas fa-users"></i>
-                            </span>
-                            <span class="ml-1">Community</span>
-                        </a>
-
-                        <div class="navbar-item">
-                            <div class="buttons">
-                                <a class="button is-light" href="https://github.com/iced-rs/iced">
-                                    <span class="icon">
-                                        <i class="fab fa-github"></i>
-                                    </span>
-                                    <span>GitHub</span>
-                                </a>
-                            </div>
+                    <div class="navbar-item">
+                        <div class="buttons">
+                            <a class="button is-light" href="https://github.com/iced-rs/iced">
+                                <span class="icon">
+                                    <i class="fab fa-github"></i>
+                                </span>
+                                <span>GitHub</span>
+                            </a>
                         </div>
                     </div>
                 </div>
-            </nav>
+            </div>
         </div>
-    </section>
+    </nav>
 
     <!-- Hero -->
-    <section class="hero is-primary is-bold">
+    <section class="hero is-bold">
         <div class="hero-body">
-            <div class="container" align="center">
-                <figure class="image">
-                    <img src="logo.white.svg" style="max-width: 35rem">
-                </figure>
-                <p class="subtitle is-3">
-                    A cross-platform GUI library for Rust focused on simplicity and type-safety.
-                </p>
+            <div class="container is-max-desktop">
+                <div class="columns is-vcentered">
+                    <div class="column is-narrow" align="center">
+                        <figure class="image">
+                            <img src="logo.svg">
+                        </figure>
+                    </div>
+                    <div class="column" align="center">
+                        <p class="subtitle is-3">
+                            A cross-platform GUI library for Rust focused on simplicity and type-safety.
+                        </p>
+                        <a class="button is-primary is-large" href="https://guide.iced.rs/">Get started</a>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
     <section class="section">
         <div class="container">
-            <h1 class="title">
-                Showcase
-            </h1>
+            <h1 class="title">Showcase</h1>
         <div>
     </section>
 
