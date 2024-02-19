@@ -90,28 +90,288 @@
     </nav>
 
     <!-- Hero -->
-    <section class="hero is-bold is-fullheight-with-navbar">
+    <section class="hero is-bold is-medium is-dark">
         <div class="hero-body">
             <div class="container is-max-desktop">
                 <div class="columns is-vcentered">
-                    <div class="column is-narrow" align="center">
-                        <figure class="image">
-                            <img src="logo.svg" style="width: 300px">
+                    <div class="column is-one-quarter" align="center">
+                        <figure class="image is-4 is-fullwidth">
+                            <img src="logo.svg">
                         </figure>
                     </div>
                     <div class="column" align="center">
+                        <h1 class="title is-1 is-spaced">iced</h1>
                         <p class="subtitle is-3">
                             A cross-platform GUI library for Rust focused on simplicity and type-safety.
                         </p>
                         <div class="buttons is-centered are-large">
                             <a class="button is-primary" href="https://book.iced.rs/" style="width: 200px">Get started</a>
-                            <a class="button is-secondary" href="https://github.com/iced-rs/iced" style="width: 200px">Contribute</a>
+                            <a class="button" href="https://github.com/iced-rs/iced" style="width: 200px">Contribute</a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+
+    <!-- Showcase -->
+    <section class="section container is-medium">
+        <h1 class="title is-1"><a id="showcase" href="showcase">#</a> Showcase</h1>
+
+        <div id="showcase-items">
+        </div>
+    </section>
     <script src="main.js"></script>
+    <script>
+        // List of showcase projects; Edit this list to add or remove projects
+        // Inspired by wgpu.rs
+        const showcase_list = [
+            {
+                "name": "Halloy",
+                "description": "A open-source IRC client written in Rust that aims to be fast and simple.",
+                "website": "https://github.com/squidowl/halloy",
+                "thumbnail": "showcase/halloy.gif",
+                "has_webp": false,
+            },
+            {
+                "name": "Sniffnet",
+                "description": "A network monitoring tool to help you easily keep track of your Internet traffic.",
+                "website": "https://sniffnet.net/",
+                "thumbnail": "showcase/sniffnet.png",
+                "has_webp": false,
+            },
+            {
+                "name": "XMODITS",
+                "description": "A tool to bulk extract samples from various tracker modules with ease.",
+                "website": "https://github.com/B0ney/xmodits",
+                "thumbnail": "showcase/xmodits.png",
+                "has_webp": false,
+            },
+            {
+                "name": "Halo",
+                "description": "A program for editing .wgsl shaders in real time!",
+                "website": "https://github.com/bungoboingo/halo",
+                "thumbnail": "showcase/halo.gif",
+                "has_webp": true,
+            },
+            {
+                "name": "Neothesia",
+                "description": "A cross-platform GPU accelerated midi visualizer, build completely in Rust.",
+                "website": "https://polymeilex.github.io/Neothesia",
+                "thumbnail": "showcase/neothesia.gif",
+                "has_webp": false,
+            },
+            {
+                "name": "Series Troxide",
+                "description": "A simple and modern series tracker.",
+                "website": "https://github.com/MaarifaMaarifa/series-troxide",
+                "thumbnail": "showcase/series-troxide.png",
+                "has_webp": false,
+            },
+            {
+                "name": "Simplemoji",
+                "description": "An application where you can have all the emojis; with easy and quick access.",
+                "website": "https://github.com/SergioRibera/Simplemoji",
+                "thumbnail": "showcase/simplemoji.gif",
+                "has_webp": false,
+            },
+            {
+                "name": "Stableview",
+                "description": "Easy, fast and efficient Head Tracking application using only webcam.",
+                "website": "https://github.com/Shubhamai/StableView",
+                "thumbnail": "showcase/stableview.gif",
+                "has_webp": false,
+            },
+            {
+                "name": "Vimini",
+                "description": "A desktop gemini browser inspired by qutebrowser and Vim.",
+                "website": "https://git.sr.ht/~lufte/vimini",
+                "thumbnail": "showcase/vimini.gif",
+                "has_webp": false,
+            },
+            {
+                "name": "Universal Android Debloater",
+                "description": "Cross-platform GUI written in Rust using ADB to debloat non-rooted android devices.",
+                "website": "https://github.com/0x192/universal-android-debloater",
+                "thumbnail": "showcase/universal-android-debloater.png",
+                "has_webp": false,
+            },
+            {
+                "name": "NuhxBoard",
+                "description": "A cross-platform alternative to NohBoard.",
+                "website": "https://github.com/justdeeevin/nuhxboard",
+                "thumbnail": "showcase/nuhxboard.png",
+                "has_webp": false,
+            },
+            {
+                "name": "Borderlands 3 Save Editor",
+                "description": "A tool to help you modify your Borderlands 3 saves and profiles.",
+                "website": "https://github.com/ZakisM/bl3_save_edit",
+                "thumbnail": "showcase/bl3_save_edit.png",
+                "has_webp": false,
+            },
+            {
+                "name": "OctaSine",
+                "description": "A free and open source frequency modulation synthesizer plugin (VST2, CLAP).",
+                "website": "https://www.octasine.com/",
+                "thumbnail": "showcase/octasine.png",
+                "has_webp": false,
+            },
+            {
+                "name": "Töörö Editor",
+                "description": "Cross-platform sound editor for the Fred's Lab Töörö hardware synthesizer.",
+                "website": "https://github.com/sourcebox/tooro-editor",
+                "thumbnail": "showcase/tooro-editor.png",
+                "has_webp": false,
+            },
+            {
+                "name": "jstation-controller",
+                "description": "A cross-platform interface to control the J-Station guitar and bass modeling and effect processing system.",
+                "website": "https://github.com/fengalin/jstation-controller",
+                "thumbnail": "showcase/jstation-controller.png",
+                "has_webp": false,
+            },
+            {
+                "name": "Offline Chess Puzzles",
+                "description": "Tool to view and solve puzzles from the lichess puzzle database.",
+                "website": "https://github.com/brianch/offline-chess-puzzles",
+                "thumbnail": "showcase/offline-chess-puzzles.gif",
+                "has_webp": false,
+            },
+            {
+                "name": "Linkage",
+                "description": "A desktop typing tutor, written in Rust.",
+                "website": "https://github.com/linkage-rs/linkage",
+                "thumbnail": "showcase/linkage.png",
+                "has_webp": false,
+            },
+            {
+                "name": "Ludusavi",
+                "description": "A tool for backing up your PC video game save data.",
+                "website": "https://github.com/mtkennerly/ludusavi",
+                "thumbnail": "showcase/ludusavi.gif",
+                "has_webp": false,
+            },
+            {
+                "name": "ENSnano",
+                "description": "A 3D graphical application for DNA nanostructures.",
+                "website": "https://github.com/ensnano/ensnano",
+                "thumbnail": "showcase/ensnano.png",
+                "has_webp": false,
+            },
+            {
+                "name": "enclone visual",
+                "description": "A cross-platform graphical user interface (GUI) for enclone.",
+                "website": "https://10xgenomics.github.io/enclone/pages/auto/visual.html",
+                "thumbnail": "showcase/enclone-visual.png",
+                "has_webp": false,
+            },
+            {
+                "name": "iced_term",
+                "description": "Terminal emulator widget powered by iced and alacritty.",
+                "website": "https://github.com/Harzu/iced_term",
+                "thumbnail": "showcase/iced_term.png",
+                "has_webp": false,
+            },
+            {
+                "name": "Game of Life",
+                "description": "An interactive version of the Game of Life, invented by John Horton Conway.",
+                "website": "https://github.com/iced-rs/iced/tree/master/examples/game_of_life",
+                "thumbnail": "examples/game_of_life.gif",
+                "has_webp": false,
+            },
+            {
+                "name": "Todos",
+                "description": "A todos tracker inspired by TodoMVC.",
+                "website": "https://github.com/iced-rs/iced/tree/master/examples/todos",
+                "thumbnail": "examples/todos.gif",
+                "has_webp": false,
+            },
+            {
+                "name": "Tuffous",
+                "description": "A to-do manager, highly inspired by Things3.",
+                "website": "https://github.com/DM-Earth/Tuffous",
+                "thumbnail": "showcase/tuffous.png",
+                "has_webp": false,
+            },
+            {
+                "name": "PWDuck",
+                "description": "A little duck 🦆 protecting your passwords. ",
+                "website": "https://github.com/Kaiden42/PWDuck",
+                "thumbnail": "showcase/pwduck.png",
+                "has_webp": false,
+            },
+            {
+                "name": "Spectrogram",
+                "description": "A .WAV spectrogram visualizer.",
+                "website": "https://github.com/JoshuaPostel/spectrogram",
+                "thumbnail": "showcase/spectrogram.gif",
+                "has_webp": false,
+            },
+            {
+                "name": "Fastotp",
+                "description": "Simple and secure TOTP token generator application.",
+                "website": "https://gitlab.com/fastotp1/fastotp",
+                "thumbnail": "showcase/fastotp.png",
+                "has_webp": false,
+            },
+            {
+                "name": "SMMDB Client",
+                "description": "Save file editor for Super Mario Maker 2.",
+                "website": "https://github.com/Tarnadas/smmdb-client",
+                "thumbnail": "showcase/smmdb-client.png",
+                "has_webp": false,
+            },
+        ];
+
+        // Showcase Card Template
+        const showcase_template = ({ name, description, website, thumbnail, has_webp }) => {
+            // Providing fallback formats for Safari
+            const file_ext_pos = thumbnail.lastIndexOf(".");
+            const file_name = thumbnail.slice(0, file_ext_pos);
+            const thumbnail_webp = `${file_name}.webp`;
+            const source = has_webp ? `<source srcset="${thumbnail_webp}">` : "";
+
+            return `
+            <div class="card">
+                <div class="card-image">
+                    <a href="${website}">
+                        <picture class="image is-3by2">
+                            ${source}
+                            <img src="${thumbnail}" loading="lazy">
+                        </picture>
+                    </a>
+                </div>
+                <div class="card-content">
+                    <div class="media">
+                        <div class="media-content">
+                            <p class="title is-4">${name}</p>
+                            <p class="subtitle is-6">${description}</p>
+                        </div>
+                    </div>
+                </div>
+                <footer class="card-footer">
+                    <a href="${website}" class="card-footer-item">
+                    <span class="icon">
+                    <i class="fas fa-external-link-alt"></i>
+                    </span>
+                    <span>Learn more</span></a>
+                </footer>
+            </div>
+            `;
+        }
+
+        const showcase_container = document.getElementById("showcase-items");
+
+        for (let { name, description, website, thumbnail, has_webp } of showcase_list) {
+            showcase_container.insertAdjacentHTML("beforeend", showcase_template({
+                name,
+                description,
+                website,
+                thumbnail,
+                has_webp
+            }));
+        } 
+    </script>
 </body>
 </html>
