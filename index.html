@@ -8,121 +8,97 @@
 
     <title>iced - A cross-platform GUI library for Rust</title>
 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.blue.min.css">
     <link rel="stylesheet" href="main.css">
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/js/all.min.js"
         integrity="sha512-YSdqvJoZr83hj76AIVdOcvLWYMWzy6sJyIMic2aQz5kh2bPTd9dzY3NtdeEAzPp/PhgZqr4aJObB3ym/vsItMg=="
         crossorigin="anonymous"></script>
 </head>
-<body class="has-navbar-fixed-top">
-    <!-- Navigation Bar -->
-    <nav class="navbar is-fixed-top" role="navigation" aria-label="dropdown navigation">
-        <div class="container">
-            <div class="navbar-brand">
-                <a class="navbar-item py-0" href="/">
-                    <img src="logo.black.svg" style="max-height: 2.0rem">
-                </a>
-
-                <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbar">
-                    <span aria-hidden="true"></span>
-                    <span aria-hidden="true"></span>
-                    <span aria-hidden="true"></span>
-                </a>
-            </div>
-
-            <div id="navbar" class="navbar-menu">
-                <div class="navbar-end">
-                    <a class="navbar-item" href="https://book.iced.rs/">
-                        <span class="icon">
-                            <i class="fas fa-bookmark"></i>
-                        </span>
-                        <span class="ml-1">Guide</span>
-                    </a>
-
-                    <div class="navbar-item has-dropdown is-hoverable">
-                        <a class="navbar-link">
-                            <span class="icon">
-                                <i class="fas fa-book"></i>
-                            </span>
-                            <span class="ml-1">API Reference</span>
-                        </a>
-
-                        <div class="navbar-dropdown">
-                            <a class="navbar-item" href="https://docs.rs/iced/">
-                                <span class="icon">
-                                    <i class="fas fa-box"></i>
-                                </span>
-                                <span class="ml-1">Latest release</span>
-                            </a>
-
-                            <a class="navbar-item" href="https://docs.iced.rs/iced/">
-                                <span class="icon">
-                                    <i class="fas fa-code-branch"></i>
-                                </span>
-                                <span class="ml-1">Development branch</span>
-                            </a>
-                        </div>
-                    </div>
-
-                    <a class="navbar-item" href="https://discourse.iced.rs">
+<body>
+    <header>
+        <nav class="container">
+            <ul>
+                <li>
+                    <img alt="iced logo (white)" src="logo.white.svg" style="height: 40px">
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <details class="dropdown">
+                        <summary>Documentation</summary>
+                        <ul>
+                            <li>
+                                <a href="https://book.iced.rs/">
+                                    <span class="icon">
+                                        <i class="fas fa-bookmark"></i>
+                                    </span>
+                                    <span>Guide</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://docs.rs/iced/">
+                                    <span class="icon">
+                                        <i class="fas fa-box"></i>
+                                    </span>
+                                    <span>Latest Release</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://docs.iced.rs/iced/">
+                                    <span class="icon">
+                                        <i class="fas fa-code-branch"></i>
+                                    </span>
+                                    <span>Development Branch</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </details>
+                </li>
+                <li>
+                    <a href="https://discourse.iced.rs/">
                         <span class="icon">
                             <i class="fab fa-discourse"></i>
                         </span>
-                        <span>Discourse</span>
                     </a>
-
-                    <a class="navbar-item" href="https://discord.gg/3xZJ65GAhd">
+                </li>
+                <li>
+                    <a href="https://discord.gg/3xZJ65GAhd">
                         <span class="icon">
                             <i class="fab fa-discord"></i>
                         </span>
-                        <span>Discord</span>
                     </a>
-
-                    <div class="navbar-item">
-                        <a class="button is-primary is-outlined" href="https://github.com/iced-rs/iced">
-                            <span class="icon">
-                                <i class="fab fa-github"></i>
-                            </span>
-                            <span>GitHub</span>
-                        </a>
-                    </div>
-                </div>
+                </li>
+                <li>
+                    <a href="https://github.com/iced-rs/iced">
+                        <span class="icon">
+                            <i class="fab fa-github"></i>
+                        </span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main class="container">
+        <section class="hero">
+            <img alt="iced logo" src="logo.svg">
+            <h1>iced</h1>
+            <p class="secondary">
+                A cross-platform GUI library for Rust focused on simplicity and type-safety.
+            </p>
+            <div class="grid">
+                <a role="button" href="https://book.iced.rs/">Get started</a>
+                <a role="button" href="https://github.com/iced-rs/iced" class="contrast">Contribute</a>
             </div>
-        </div>
-    </nav>
+        </section>
 
-    <!-- Hero -->
-    <section class="hero is-bold is-medium is-dark">
-        <div class="hero-body">
-            <div class="container is-max-desktop">
-                <div class="columns is-vcentered">
-                    <div class="column is-one-quarter" align="center">
-                        <figure class="image is-4 is-fullwidth">
-                            <img src="logo.svg">
-                        </figure>
-                    </div>
-                    <div class="column" align="center">
-                        <h1 class="title is-1 is-spaced">iced</h1>
-                        <p class="subtitle is-3">
-                            A cross-platform GUI library for Rust focused on simplicity and type-safety.
-                        </p>
-                        <div class="buttons is-centered are-large">
-                            <a class="button is-primary" href="https://book.iced.rs/" style="width: 200px">Get started</a>
-                            <a class="button" href="https://github.com/iced-rs/iced" style="width: 200px">Contribute</a>
-                        </div>
-                    </div>
-                </div>
+        <section id="showcase">
+            <h1><a href="#showcase" class="secondary">#</a> Showcase</h1>
+
+            <div id="showcase-items">
             </div>
-        </div>
-    </section>
-
-    <!-- Showcase -->
-    <section class="section container is-medium" id="showcase">
-        <h1 class="title is-1"><a href="#showcase">#</a> Showcase</h1>
-
-        <div id="showcase-items">
-        </div>
-    </section>
+        </section>
+    </main>
     <script src="main.js"></script>
     <script>
         // List of showcase projects; Edit this list to add or remove projects
@@ -363,31 +339,18 @@
             const source = has_webp ? `<source srcset="${thumbnail_webp}">` : "";
 
             return `
-            <div class="card">
-                <div class="card-image">
+            <article>
+                <header>
                     <a href="${website}">
-                        <picture class="image is-3by2">
+                        <picture>
                             ${source}
                             <img src="${thumbnail}" loading="lazy">
                         </picture>
                     </a>
-                </div>
-                <div class="card-content">
-                    <div class="media">
-                        <div class="media-content">
-                            <p class="title is-4">${name}</p>
-                            <p class="subtitle is-6">${description}</p>
-                        </div>
-                    </div>
-                </div>
-                <footer class="card-footer">
-                    <a href="${website}" class="card-footer-item">
-                    <span class="icon">
-                    <i class="fas fa-external-link-alt"></i>
-                    </span>
-                    <span>Learn more</span></a>
-                </footer>
-            </div>
+                </header>
+                <h3><a href="${website}" class="contrast">${name}</a></h3>
+                ${description}
+            </article>
             `;
         }
 
