@@ -18,7 +18,7 @@ jobs:
 
       - name: Build website
         run: |
-          docker run -u "$(id -u):$(id -g)" -v $PWD:/app --workdir /app ghcr.io/getzola/zola:v0.15.1 build
+          docker run -u "$(id -u):$(id -g)" -v $PWD:/app --workdir /app ghcr.io/getzola/zola:v0.22.1 build
 
       - name: Copy CNAME
         run: cp CNAME ./public/.
